@@ -48,5 +48,7 @@ You need Java 17 (at least) and [Maven](https://maven.apache.org/download.cgi) i
 
 From your terminal, clone the project locally, go into the project folder, and run: `mvn spring-boot:run`
 
+Then, access the Web app from your browser at: [`http://localhost:8080/`](http://localhost:8080/)
+
 ## Testing
 You can run unit tests with: `mvn test`.
