@@ -1,0 +1,69 @@
+Resources: 
+  DBInstance:
+    Type: AWS::RDS::DBInstance
+    Properties: 
+      AllocatedStorage: 20
+      DBInstanceClass: db.t3.micro
+      Engine: mysql
+      EngineVersion: 8.0.25
+      Port: 3306
+      StorageType: gp2
+      MasterUsername: 'admin'
+      MasterUserPassword: 'a7sd9f87as9d8f'
+
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-0889a44b331db0194
+      InstanceType: t2.micro
+      SecurityGroupIds:
+        - !Ref EC2SecurityGroup
+      IamInstanceProfile: !Ref EC2InstanceProfile
+      UserData: 
+          Fn::Base64: |            
+            #!/usr/bin/bash
+            yum install java-17-amazon-corretto-headless.x86_64 -y
+            /usr/bin/aws s3 cp s3://deploy-app-a9sd8f79a8/todo-0.0.1-SNAPSHOT.jar /home/ec2-user/ --region us-east-1
+            /usr/bin/java -jar /home/ec2-user/todo-0.0.1-SNAPSHOT.jar
+            EOF
+
+  EC2SecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable HTTP access via port 8080
+      SecurityGroupIngress:
+        - IpProtocol: tcp
+          FromPort: 8080
+          ToPort: 8080
+          CidrIp: 0.0.0.0/0
+
+  EC2InstanceProfile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Roles:
+        - !Ref EC2Role
+
+  EC2Role:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - ec2.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Path: /
+      Policies:
+        - PolicyName: S3ReadAccessPolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - s3:GetObject
+                Resource: arn:aws:s3:::deploy-app-a9sd8f79a8/*
+
+      

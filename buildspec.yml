@@ -1,0 +1,10 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - mvn package
+artifacts:
+  files:
+    - 'target/todo-0.0.1-SNAPSHOT.jar'
+  discard-paths: yes
