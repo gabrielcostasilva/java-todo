@@ -3,6 +3,16 @@ This project introduces a web To-Do app that allows adding, removing, and markin
 
 We use this project in the [online certification Java program](http://pos-graduacao-ead.cp.utfpr.edu.br/java/), for the module I teach on Java for Web applications.
 
+## Other Branches
+
+This original project is extended in other branches, as follows:
+
+- [project](https://github.com/gabrielcostasilva/java-todo/tree/project) is the empty project with all required dependencies for the main branch project.
+- [persistence](https://github.com/gabrielcostasilva/java-todo/tree/persistence) creates the persistence layer for the project.
+- [container](https://github.com/gabrielcostasilva/java-todo/tree/container) containerises the application within a Docker container.
+- [compose](https://github.com/gabrielcostasilva/java-todo/tree/compose) sets the application infrastructure using containers. In particular, it uses Docker Compose for orchestrating the container launch.
+- [ci-cd](https://github.com/gabrielcostasilva/java-todo/tree/ci-cd) adds infrastructure as code (IaC) and CI features for using with AWS CodePipeline and AWS CloudFormation services.
+
 ## Project Overview
 The Figure below shows the only webpage in the application. From top to bottom, it consists of a title (_Todo App_), a text box for adding a new to-do (_Add a new to-do_), a list of existing to-dos (_To wash the car_, and _To tidy up the house_), and action buttons for adding (_Add_), deleting (_Delete_), or marking a to-do as done (_Mark as done_).
 
