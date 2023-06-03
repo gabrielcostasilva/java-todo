@@ -9,7 +9,7 @@ This original project is extended in other branches, as follows:
 
 - [project](https://github.com/gabrielcostasilva/java-todo/tree/project) is the empty project with all required dependencies for the main branch project.
 - [persistence](https://github.com/gabrielcostasilva/java-todo/tree/persistence) creates the persistence layer for the project.
-- [container](https://github.com/gabrielcostasilva/java-todo/tree/container) containerises the application within a Docker container.
+- [container](https://github.com/gabrielcostasilva/java-todo/tree/container) containerises the application within a Docker container. This branch also shows a much easier way to create containers with Spring Boot.
 - [compose](https://github.com/gabrielcostasilva/java-todo/tree/compose) sets the application infrastructure using containers. In particular, it uses Docker Compose for orchestrating the container launch.
 - [ci-cd](https://github.com/gabrielcostasilva/java-todo/tree/ci-cd) adds infrastructure as code (IaC) and CI features for using with AWS CodePipeline and AWS CloudFormation services.
 - [beanstalk-container](https://github.com/gabrielcostasilva/java-todo/tree/beanstalk-container) sets specific configuration and artefacts for deploying the project using the [Amazon Beanstalk](https://aws.amazon.com/elasticbeanstalk/) console.
