@@ -11,3 +11,5 @@ We use this project in the [online certification Java program](http://pos-gradua
 This branch adds a new file:
 
 - [`Dockerfile`](./Dockerfile) describes the process for containerising the application.
+
+> The easiest way to create Docker images with Spring Boot is running `mvn spring-boot:build-image`. Then you can run the container like so: `docker run -d -p 8080:8080 docker.io/library/todo:0.0.1-SNAPSHOT`. But remember Docker Desktop must be installed and running!
