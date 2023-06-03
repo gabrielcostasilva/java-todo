@@ -15,7 +15,7 @@
 <form method="post" action="/add" class="mt-4">
     <div class="input-group mb-3">
       <input type="text" name="task" class="form-control" placeholder="Add a new to-do...">
-      <button type="submit" class="btn btn-primary">Add</button>
+      <button id="add" type="submit" class="btn btn-primary">Add</button>
     </div>
   </form>
   </div>
