@@ -13,6 +13,7 @@ This original project is extended in other branches, as follows:
 - [compose](https://github.com/gabrielcostasilva/java-todo/tree/compose) sets the application infrastructure using containers. In particular, it uses Docker Compose for orchestrating the container launch.
 - [ci-cd](https://github.com/gabrielcostasilva/java-todo/tree/ci-cd) adds infrastructure as code (IaC) and CI features for using with AWS CodePipeline and AWS CloudFormation services.
 - [beanstalk-container](https://github.com/gabrielcostasilva/java-todo/tree/beanstalk-container) sets specific configuration and artefacts for deploying the project using the [Amazon Beanstalk](https://aws.amazon.com/elasticbeanstalk/) console.
+- [e2e-selenide](https://github.com/gabrielcostasilva/java-todo/tree/e2e-selenide) introduces a simple end-to-end test with [Selenide](https://selenide.org) for example purposes.
 
 ## Project Overview
 The Figure below shows the only webpage in the application. From top to bottom, it consists of a title (_Todo App_), a text box for adding a new to-do (_Add a new to-do_), a list of existing to-dos (_To wash the car_, and _To tidy up the house_), and action buttons for adding (_Add_), deleting (_Delete_), or marking a to-do as done (_Mark as done_).
