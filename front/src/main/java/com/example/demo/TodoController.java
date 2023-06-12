@@ -16,7 +16,7 @@ import kong.unirest.Unirest;
 @Controller
 public class TodoController {
 
-    private final Strinl url = "http://localhost:8080";
+    private final String url = "http://localhost:8080";
 
     @GetMapping("/")
     public String getTodos(Model memory) {
