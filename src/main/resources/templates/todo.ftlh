@@ -29,9 +29,9 @@
         <#if todo.status>
   <a href="#" class="btn btn-success" disabled>Done!</a>
 <#else>
-        <a href="/update?id=${todo.id}" class="btn btn-primary">Mark as done</a>
+        <a href="/update?task=${todo.task}" class="btn btn-primary">Mark as done</a>
 </#if>
-        <a href="/remove?id=${todo.id}" class="btn btn-danger">Delete</a>
+        <a href="/remove?task=${todo.task}" class="btn btn-danger">Delete</a>
         </div>
       </li>
     </#list>
