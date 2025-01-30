@@ -17,6 +17,7 @@ This original project is extended in other branches, as follows:
 - [client-server-java](https://github.com/gabrielcostasilva/java-todo/tree/client-server-java) breaks down the application into a client-server architecture using REST to linking front- (client) and back- (server) end.
 - [no-persistence](https://github.com/gabrielcostasilva/java-todo/tree/no-persistence) shows the project using only an in-memory `List`.
 - [mongo-db](https://github.com/gabrielcostasilva/java-todo/tree/mongo-db) adds No-SQL persistence using the popular MongoDB.
+- [pure-java](https://github.com/gabrielcostasilva/java-todo/tree/pure-java) removes any Web annotation, making the project pure Java. Notice it still needs unit tests to demonstrate its features.
 
 ## Project Overview
 The Figure below shows the only webpage in the application. From top to bottom, it consists of a title (_Todo App_), a text box for adding a new to-do (_Add a new to-do_), a list of existing to-dos (_To wash the car_, and _To tidy up the house_), and action buttons for adding (_Add_), deleting (_Delete_), or marking a to-do as done (_Mark as done_).
