@@ -33,15 +33,15 @@ public class TodoController {
     }
 
     @GetMapping("/remove")
-    public String deleteTodo(@RequestParam String task) {
-        todos.removeIf(item -> item.getTask().equals(task));
+    public String deleteTodo(@RequestParam String id) {
+        todos.removeIf(item -> item.getId().equals(id));
 
         return "redirect:/";
     }
 
     @GetMapping("/update")
-    public String updateTodo(@RequestParam String task) {
-        todos.stream().filter(item -> item.getTask().equals(task)).findFirst().ifPresent(todo -> todo.setStatus(!todo.isStatus()));
+    public String updateTodo(@RequestParam String id) {
+        todos.stream().filter(item -> item.getId().equals(id)).findFirst().ifPresent(todo -> todo.setStatus(!todo.isStatus()));
 
         return "redirect:/";
     }
