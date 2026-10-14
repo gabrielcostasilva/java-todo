@@ -3,13 +3,13 @@ This project introduces a web To-Do app that allows adding, removing, and markin
 
 We use this project in the [online certification Java program](http://pos-graduacao-ead.cp.utfpr.edu.br/java/), for the module I teach on Java for Web applications.
 
-**This branch containerises the application with Docker**.
+> [!NOTE]
+> This branch automates the CI process using Github Actions. Two independent workflows show how to publish a (i) [Jar with Maven](/.github/worflows/build-publish.yaml), and (ii) [Docker container](/.github/workflows/docker-ci.yaml) in Github registry.
 
 > If you want to understand the underlying application, please check out the [main branch](https://github.com/gabrielcostasilva/java-todo.git).
 
 ## Project Overview
-This branch adds a new file:
+This branch adds two new files, representing the workflows. Both can be found in [`/.github/workflows`](/.github/workflows) folder.
 
-- [`Dockerfile`](./Dockerfile) describes the process for containerising the application.
-
-> The easiest way to create Docker images with Spring Boot is running `mvn spring-boot:build-image`. Then you can run the container like so: `docker run -d -p 8080:8080 docker.io/library/todo:0.0.1-SNAPSHOT`. But remember Docker Desktop must be installed and running!
+> [!IMPORTANT]
+> Both workflows are set to run manually. Therefore, to run the actions you should turn this branch into the main using the repo `Settings`.
